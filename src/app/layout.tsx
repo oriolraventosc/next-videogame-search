@@ -16,11 +16,6 @@ const links = [
   { label: "Videogame", route: "/videogame" },
 ];
 
-export const metadata = {
-  title: "Game4U",
-  description: "Search between millions of videogames",
-};
-
 export default function RootLayout({
   children,
 }: {
@@ -30,6 +25,11 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="shortcut icon" href="/favicon/favicon.png" />
+        <title>Game4U</title>
+        <meta
+          name="description"
+          content="Search between millions of videogames"
+        />
       </head>
       <body className={roboto.className}>
         <header>
