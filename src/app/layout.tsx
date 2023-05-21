@@ -1,11 +1,7 @@
 "use client";
 import Link from "next/link";
-import colors from "../styles/colors";
-import GlobalStyles from "../styles/globalStyles";
-import mainTheme from "@/styles/mainTheme";
-import { ThemeProvider as StyledThemeProvider } from "styled-components";
-import { ThemeProvider } from "@mui/material";
 import { Roboto } from "next/font/google";
+import { Providers } from "./GlobalRedux/provider";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -31,29 +27,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ThemeProvider theme={mainTheme}>
-      <StyledThemeProvider theme={colors}>
-        <GlobalStyles />
-        <html lang="en">
-          <head>
-            <link rel="shortcut icon" href="/favicon/favicon.png" />
-          </head>
-          <body className={roboto.className}>
-            <header>
-              <nav>
-                <ul>
-                  {links.map(({ label, route }) => (
-                    <li key={route}>
-                      <Link href={route}>{label}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-            </header>
-            <main>{children}</main>
-          </body>
-        </html>
-      </StyledThemeProvider>
-    </ThemeProvider>
+    <html lang="en">
+      <head>
+        <link rel="shortcut icon" href="/favicon/favicon.png" />
+      </head>
+      <body className={roboto.className}>
+        <header>
+          <nav>
+            <ul>
+              {links.map(({ label, route }) => (
+                <li key={route}>
+                  <Link href={route}>{label}</Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+        <main>
+          <Providers>{children}</Providers>
+        </main>
+      </body>
+    </html>
   );
 }
