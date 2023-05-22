@@ -2,19 +2,12 @@
 import Link from "next/link";
 import { Roboto } from "next/font/google";
 import { Providers } from "./GlobalRedux/provider";
+import Header from "../components/Header/Header";
 
 const roboto = Roboto({
   subsets: ["latin"],
   weight: "400",
 });
-
-const links = [
-  {
-    label: "Home",
-    route: "/",
-  },
-  { label: "Videogame", route: "/videogame" },
-];
 
 export default function RootLayout({
   children,
@@ -32,17 +25,7 @@ export default function RootLayout({
         />
       </head>
       <body className={roboto.className}>
-        <header>
-          <nav>
-            <ul>
-              {links.map(({ label, route }) => (
-                <li key={route}>
-                  <Link href={route}>{label}</Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </header>
+        <Header />
         <main>
           <Providers>{children}</Providers>
         </main>
