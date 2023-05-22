@@ -66,6 +66,7 @@ const HeaderStyled = styled("header")`
       position: fixed;
       height: calc(100vh - 90px);
       width: 100%;
+      z-index: 8;
       gap: 4rem;
       background-color: ${colors.main};
       transform: translateX(100%);
@@ -80,6 +81,7 @@ const HeaderStyled = styled("header")`
         display: flex;
         gap: 4rem;
         width: 100%;
+        z-index: 8;
         position: fixed;
         height: calc(100vh - 90px);
         background-color: ${colors.main};

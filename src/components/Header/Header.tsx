@@ -45,7 +45,7 @@ const Header = () => {
               <Typography
                 variant="body2"
                 sx={{
-                  fontSize: "1.5rem",
+                  fontSize: "1.4rem",
                   fontWeight: "regular",
                   display: "inline",
                   color: "#fff",
