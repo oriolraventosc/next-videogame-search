@@ -8,7 +8,11 @@ import mainTheme from "../../styles/mainTheme";
 import { ThemeProvider as StyledThemeProvider } from "styled-components";
 import { ThemeProvider } from "@mui/material";
 
-export function Providers({ children }) {
+interface Props {
+  children: any;
+}
+
+export function Providers({ children }: Props) {
   return (
     <Provider store={store}>
       <ThemeProvider theme={mainTheme}>
