@@ -78,15 +78,13 @@ const Header = () => {
               className="mobile__logo-icon"
             />
           </Link>
-          <article
-            className={active ? "hamburger is-active" : "hamburger"}
-            id="hamburger-1"
-            onClick={() => setActive(!active)}
-          >
-            <span className="line"></span>
-            <span className="line"></span>
-            <span className="line"></span>
-          </article>
+          <div className={"container nav-container checkbox"}>
+            <div className="hamburger-lines" onClick={() => setActive(!active)}>
+              <span className={active ? "line line1" : "line line1"}></span>
+              <span className={active ? "line line2" : "line line2"}></span>
+              <span className={active ? "line line3" : "line line3"}></span>
+            </div>
+          </div>
         </div>
         <article
           className={

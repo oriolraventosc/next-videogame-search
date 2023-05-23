@@ -2,6 +2,88 @@ import { styled } from "@mui/material";
 import colors from "../../styles/colors";
 
 const HeaderStyled = styled("header")`
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+  }
+
+  .navbar .menu-items {
+    display: flex;
+  }
+
+  .navbar .nav-container a:hover {
+    font-weight: bolder;
+  }
+
+  .nav-container {
+    display: block;
+    position: relative;
+    height: 60px;
+    width: inherit;
+    padding-right: 3.1rem;
+  }
+
+  .nav-container .checkbox {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 32px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .nav-container .hamburger-lines {
+    display: block;
+    height: 26px;
+    width: 32px;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #fff;
+  }
+
+  .line.line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .line.line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .line.line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .line.line1-active {
+    transform: rotate(45deg);
+  }
+
+  .line.line2-active {
+    transform: scaleY(0);
+  }
+
+  .line.line3-active {
+    transform: rotate(-45deg);
+  }
+
   .desktop {
     display: none;
   }
@@ -57,6 +139,8 @@ const HeaderStyled = styled("header")`
     height: 90px;
     justify-content: space-between;
     align-items: center;
+    z-index: 9;
+    position: relative;
     &-button:hover {
       background-color: #fff;
       color: ${colors.main};
@@ -83,7 +167,8 @@ const HeaderStyled = styled("header")`
         width: 100%;
         z-index: 8;
         position: fixed;
-        height: calc(100vh - 90px);
+        margin-top: -6.2rem;
+        height: calc(100vh + 3rem);
         background-color: ${colors.main};
         transform: translateX(0%);
         transition: all 0.5s ease-in-out;
