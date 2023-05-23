@@ -132,6 +132,9 @@ const HeaderStyled = styled("header")`
     -o-transform: translateY(-13px) rotate(-45deg);
     transform: translateY(-13px) rotate(-45deg);
   }
+  .hamburger-react {
+    margin-right: -0.6rem;
+  }
   .mobile-tablet {
     display: flex;
     padding-left: 2rem;
