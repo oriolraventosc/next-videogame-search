@@ -1,6 +1,7 @@
 import colors from "@/styles/colors";
 import HeaderStyled from "./HeaderStyled";
 import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
+import { Sling as Hamburger } from "hamburger-react";
 import { Typography, Button } from "@mui/material";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -78,13 +79,14 @@ const Header = () => {
               className="mobile__logo-icon"
             />
           </Link>
-          <div className={"container nav-container checkbox"}>
-            <div className="hamburger-lines" onClick={() => setActive(!active)}>
-              <span className={active ? "line line1" : "line line1"}></span>
-              <span className={active ? "line line2" : "line line2"}></span>
-              <span className={active ? "line line3" : "line line3"}></span>
-            </div>
-          </div>
+          <Hamburger
+            color="#fff"
+            toggled={active}
+            toggle={() => setActive(!active)}
+            size={30}
+            rounded
+            hideOutline={true}
+          />
         </div>
         <article
           className={
