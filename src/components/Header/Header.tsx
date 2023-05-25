@@ -30,7 +30,7 @@ const Header = () => {
                 variant="body2"
                 className="desktop__logo-title"
                 sx={{
-                  fontSize: "2.5rem",
+                  fontSize: "2.2rem",
                   fontWeight: "regular",
                   display: "inline",
                   pl: "0.5rem",
@@ -46,7 +46,7 @@ const Header = () => {
               <Typography
                 variant="body2"
                 sx={{
-                  fontSize: "1.4rem",
+                  fontSize: "1.3rem",
                   fontWeight: "regular",
                   display: "inline",
                   color: "#fff",
