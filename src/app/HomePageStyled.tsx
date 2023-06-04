@@ -15,7 +15,7 @@ const HomePageStyled = styled("section")`
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    padding-top: 2rem;
+    padding-top: 100px;
     padding-bottom: 2rem;
     @media (min-width: 383px) {
       display: grid;
@@ -46,6 +46,11 @@ const HomePageStyled = styled("section")`
   @media (min-width: 1024px) {
     height: calc(100vh - 100px);
     left: -4rem;
+    padding-top: 100px;
+    .videogames {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
   }
 `;
 

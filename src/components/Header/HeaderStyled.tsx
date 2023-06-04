@@ -2,6 +2,7 @@ import { styled } from "@mui/material";
 import colors from "../../styles/colors";
 
 const HeaderStyled = styled("header")`
+  z-index: 8;
   .nav-container {
     display: flex;
     justify-content: space-between;
@@ -135,15 +136,23 @@ const HeaderStyled = styled("header")`
   .hamburger-react {
     margin-right: -0.6rem;
   }
+  .mobile-tablet div {
+    right: 4.2rem;
+  }
+  .mobile-tablet a {
+    padding-top: 0.3rem;
+  }
   .mobile-tablet {
     display: flex;
     padding-left: 2rem;
     padding-right: 2rem;
-    height: 90px;
+    height: 75px;
     justify-content: space-between;
     align-items: center;
     z-index: 9;
-    position: relative;
+    position: fixed;
+    width: 100%;
+    background-color: ${colors.main};
     &-button:hover {
       background-color: #fff;
       color: ${colors.main};
@@ -170,7 +179,7 @@ const HeaderStyled = styled("header")`
         width: 100%;
         z-index: 8;
         position: fixed;
-        margin-top: -6.2rem;
+        margin-top: 0;
         height: calc(100vh + 3rem);
         background-color: ${colors.main};
         transform: translateX(0%);
@@ -200,6 +209,7 @@ const HeaderStyled = styled("header")`
     align-items: center;
     justify-content: center;
     height: 100px;
+    position: fixed;
     .desktop {
       display: flex;
       justify-content: space-between;
@@ -210,6 +220,7 @@ const HeaderStyled = styled("header")`
         display: flex;
         justify-content: center;
         align-items: center;
+        padding-left: 4rem;
         &-icon:hover {
           cursor: pointer;
         }
@@ -222,6 +233,7 @@ const HeaderStyled = styled("header")`
         justify-content: center;
         align-items: center;
         gap: 2rem;
+        padding-right: 4rem;
         &-item:hover {
           cursor: pointer;
           transition: 0.2s;
