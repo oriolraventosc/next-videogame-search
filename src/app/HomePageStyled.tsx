@@ -46,7 +46,7 @@ const HomePageStyled = styled("section")`
   @media (min-width: 1024px) {
     height: calc(100vh - 100px);
     left: -4rem;
-    padding-top: 100px;
+    padding-top: 2rem;
     .videogames {
       padding-left: 4rem;
       padding-right: 4rem;
