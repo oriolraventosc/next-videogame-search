@@ -50,6 +50,7 @@ const HomePageStyled = styled("section")`
     .videogames {
       padding-left: 4rem;
       padding-right: 4rem;
+      padding-top: 6rem;
     }
   }
 `;
