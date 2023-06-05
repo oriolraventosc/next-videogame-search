@@ -75,7 +75,7 @@ const Header = () => {
         <div className="mobile-tablet">
           <Link href={"/"}>
             <SportsEsportsIcon
-              sx={{ fontSize: "3.5rem", color: "#fff" }}
+              sx={{ fontSize: "2.5rem", color: "#fff" }}
               className="mobile__logo-icon"
             />
           </Link>
@@ -83,7 +83,7 @@ const Header = () => {
             color="#fff"
             toggled={active}
             toggle={() => setActive(!active)}
-            size={30}
+            size={25}
             rounded
             hideOutline={true}
           />
