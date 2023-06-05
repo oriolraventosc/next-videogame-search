@@ -146,7 +146,7 @@ const HeaderStyled = styled("header")`
     display: flex;
     padding-left: 2rem;
     padding-right: 2rem;
-    height: 75px;
+    height: 50px;
     justify-content: space-between;
     align-items: center;
     z-index: 9;

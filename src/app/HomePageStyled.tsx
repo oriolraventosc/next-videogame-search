@@ -15,7 +15,7 @@ const HomePageStyled = styled("section")`
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    padding-top: 100px;
+    padding-top: 4.25rem;
     padding-bottom: 2rem;
     @media (min-width: 383px) {
       display: grid;
